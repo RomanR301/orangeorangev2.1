@@ -1,0 +1,107 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.credit {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: Termina, sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.credit a {
+  color: #1a292c;
+  text-transform: lowercase;
+}
+
+.container:nth-child(2) {
+  background: #3c564f;
+}
+.container:nth-child(1) {
+  background: #b69187;
+}
+.container:nth-child(4) {
+  background: #bcb8ad;
+}
+.container:nth-child(3) {
+  background: #b6916d;
+}
+
+img {
+  height: 100%;
+  width: auto;
+  max-width: 75vw;
+  object-fit: contain;
+}
+.reveal {
+  transform: rotate(180deg);
+}
+.reveal img {
+  transform: rotate(180deg);
+}
+h2 {
+  font-family: Termina, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  color: transparent;
+  font-size: clamp(3rem, 10vw, 6rem);
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 90%;
+  height: 50%;
+  z-index: 99;
+  display: grid;
+  place-items: center;
+}
+
+body:not(.no-js) .image-wrap {
+  transition: 3s ease-out;
+  transition-delay: 0.2s;
+  position: relative;
+  width: auto;
+  height: 80vh;
+  overflow: hidden;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  visibility: hidden;
+}
+
+
+body:not(.no-js) .animating .image-wrap {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  visibility: visible;
+  transform: skewY(0);
+}
+
+/* // smooth scroll */
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.scroll-container {  
+  position: absolute;  
+  overflow: hidden;
+  z-index: 10;
+  backface-visibility: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+}
